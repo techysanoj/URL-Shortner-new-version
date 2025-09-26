@@ -1,0 +1,26 @@
+{
+  "name": "url-shortner-new-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techysanoj/URL-Shortner-new-version.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techysanoj/URL-Shortner-new-version/issues"
+  },
+  "homepage": "https://github.com/techysanoj/URL-Shortner-new-version#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.18.2",
+    "nanoid": "^5.1.6",
+    "nodemon": "^3.1.10"
+  }
+}
