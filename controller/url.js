@@ -2,6 +2,8 @@ const {nanoid} = require('nanoid');
 
 const URL = require('../models/url');
 
+const home = 'home'; // using this we can get home.ejs file from views folder
+
 async function handleGenerateShortURL(req, res) {
     // we will use short id package
     const body = req.body;
@@ -15,7 +17,10 @@ async function handleGenerateShortURL(req, res) {
         visitHistory: []
     });
 
-    return res.json({shortURL: `${shortId}`});
+    return res.render('home', {
+        id: shortId,
+    })
+    // return res.json({shortURL: `${shortId}`});
 }
 
 async function handleGetShortURL(req, res) {
@@ -49,8 +54,17 @@ async function handleGetURLStats(req, res) {
 
 }
 
+async function handleGetHTMLurl(req, res) {
+    const allUrl = await URL.find({});
+
+    return res.render(home, {
+        urls: allUrl,
+    }); // it will render our home view, we can send the data as second argument
+}
+
 module.exports = {
     handleGenerateShortURL,
     handleGetShortURL,
-    handleGetURLStats
+    handleGetURLStats,
+    handleGetHTMLurl
 };

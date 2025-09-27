@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/techysanoj/URL-Shortner-new-version#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.18.2",
     "nanoid": "^5.1.6",

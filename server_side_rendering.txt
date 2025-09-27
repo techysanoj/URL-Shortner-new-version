@@ -1,0 +1,8 @@
+In this basically whatever is send from the backend / API we show it on the frontend
+
+first thing is 
+Send the directly completely HTML file to the frontend.
+
+Second thing is
+use the Engine like EJS, PUG etc.
+
